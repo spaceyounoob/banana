@@ -22,8 +22,9 @@ function love.draw()
     maxwell:draw()
     maxwellwhiskers:draw()
   love.graphics.setFont(eras)
- love.graphics.print("FPS: "..tostring(love.timer.getFPS( )), 10, 10)
-   love.graphics.print("Time: "..tostring(love.timer.getTime( )), 10, 40)
+love.graphics.print("Beta 1.0.0", 10, 10) 
+love.graphics.print("FPS: "..tostring(love.timer.getFPS( )), 10, 40)
+   love.graphics.print("Time: "..tostring(love.timer.getTime( )), 10, 70)
 end
 
 function love.mousemoved(x,y, dx,dy)
