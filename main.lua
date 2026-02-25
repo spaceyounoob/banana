@@ -4,7 +4,9 @@ local timer = 0
 local shader = love.graphics.newShader("g3d/g3d.vert", "content/shader/lighting.frag")
 local maxwell = g3d.newModel("content/models/dingus.obj", "content/textures/dingus.jpg", {10,5,6}, nil, {1,1,1})
 local maxwellwhiskers = g3d.newModel("content/models/whiskers.obj", "content/textures/dingus-whiskers.png", {10,5,6}, nil, {1,1,1})
-
+poo = love.sound.newSoundData("content/music/poo.mp3")
+mightypoo = love.audio.newSource(poo, static)
+mightypoo:play()
 
 function love.update(dt)
     timer = timer + dt
@@ -18,6 +20,8 @@ function love.draw()
     skybox:draw()
     maxwell:draw()
     maxwellwhiskers:draw()
+   love.graphics.print("FPS: "..tostring(love.timer.getFPS( )), 10, 10)
+   love.graphics.print("Time: "..tostring(love.timer.getTime( )), 10, 30)
 end
 
 function love.mousemoved(x,y, dx,dy)
