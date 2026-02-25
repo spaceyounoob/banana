@@ -7,6 +7,7 @@ local maxwellwhiskers = g3d.newModel("content/models/whiskers.obj", "content/tex
 poo = love.sound.newSoundData("content/music/poo.mp3")
 mightypoo = love.audio.newSource(poo, static)
 mightypoo:play()
+eras = love.graphics.newFont("content/fonts/erasdemi.ttf", 30)
 
 function love.update(dt)
     timer = timer + dt
@@ -20,8 +21,9 @@ function love.draw()
     skybox:draw()
     maxwell:draw()
     maxwellwhiskers:draw()
-   love.graphics.print("FPS: "..tostring(love.timer.getFPS( )), 10, 10)
-   love.graphics.print("Time: "..tostring(love.timer.getTime( )), 10, 30)
+  love.graphics.setFont(eras)
+ love.graphics.print("FPS: "..tostring(love.timer.getFPS( )), 10, 10)
+   love.graphics.print("Time: "..tostring(love.timer.getTime( )), 10, 40)
 end
 
 function love.mousemoved(x,y, dx,dy)
