@@ -19,7 +19,7 @@ function love.draw()
     maxwell:draw()
     maxwellwhiskers:draw()
   love.graphics.setFont(eras)
-love.graphics.print("ALPHA v0.0.1", 10, 10) 
+love.graphics.print("ALPHA v0.0.2", 10, 10) 
 love.graphics.print("FPS: "..tostring(love.timer.getFPS( )), 10, 40)	
    love.graphics.print("Time: "..tostring(love.timer.getTime( )), 10, 70)
 end
